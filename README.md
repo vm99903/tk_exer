@@ -12,7 +12,9 @@ This was developed and tested usng Eclipse IDE as well as by executing main prog
 Instructions to run this solution.
 
 Following will build the project and execvute all tests
-mvn clean install
+
+> **mvn clean install**
 
 Following command will execute the main java program to show the relevant output
-mvn exec:java
+
+> **mvn exec:java**
