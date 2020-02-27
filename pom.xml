@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tk</groupId>
+	<artifactId>tk-exercise</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	
+	<properties>
+		<version.maven-compiler-plugin>3.8.0</version.maven-compiler-plugin>
+		<version.maven-release>11</version.maven-release>
+		<version.exec-maven-plugin>1.6.0</version.exec-maven-plugin>
+		<version.junit>4.12</version.junit>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>${version.junit}</version>
+		    <scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven-compiler-plugin}</version>
+				<configuration>
+					<release>${version.maven-release}</release>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${version.exec-maven-plugin}</version>
+				<configuration>
+					<mainClass>com.tk.vm.CodingExercise</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
